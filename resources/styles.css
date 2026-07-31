@@ -1,0 +1,70 @@
+.suite-title {
+  font-size: 28;
+  font-weight: bold;
+  fill: #ffffff;
+  text-anchor: middle;
+}
+
+.suite-btn-text {
+  font-size: 22;
+  font-weight: bold;
+  fill: #ffffff;
+  text-anchor: middle;
+}
+
+/* Calculator */
+.calc-display-text {
+  font-size: 34;
+  fill: #ffffff;
+  text-anchor: end;
+}
+
+.calc-key {
+  font-size: 24;
+  font-weight: bold;
+  fill: #ffffff;
+  text-anchor: middle;
+}
+
+/* Cookie Clicker */
+.cookie-count {
+  font-size: 26;
+  font-weight: bold;
+  fill: #F39C12;
+  text-anchor: middle;
+}
+
+.cookie-cps {
+  font-size: 18;
+  fill: #E67E22;
+  text-anchor: middle;
+}
+
+.cookie-buy-text {
+  font-size: 16;
+  font-weight: bold;
+  fill: #ffffff;
+  text-anchor: middle;
+}
+
+/* 2048 */
+.g2048-score {
+  font-size: 18;
+  font-weight: bold;
+  fill: #776E65;
+  text-anchor: middle;
+}
+
+.g2048-status {
+  font-size: 22;
+  fill: #ffffff;
+  text-anchor: middle;
+}
+
+/* Pong */
+.pong-score {
+  font-size: 50;
+  font-weight: bold;
+  fill: #7F8C8D;
+  text-anchor: middle;
+}

@@ -1,0 +1,1135 @@
+<svg>
+  <defs>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="import" href="widget.defs" />
+  </defs>
+
+  <!-- ==================== 1. LOCK SCREEN (PIN CUSTOM) ==================== -->
+  <g id="pin-app-view" display="inline">
+    <rect x="0" y="0" width="100%" height="100%" fill="#111111" />
+    
+    <!-- Green Header -->
+    <rect x="0" y="0" width="100%" height="80" fill="#27AE60" />
+    <text id="pin-display" x="50%" y="55" font-size="40" fill="#111111" font-weight="bold" text-anchor="middle" letter-spacing="2" text-length="10">- - - -</text>
+
+    <!-- Keypad Row 1 -->
+    <g id="pin-btn-1" pointer-events="all">
+      <rect x="0" y="90" width="33%" height="60" opacity="0" pointer-events="all" />
+      <text x="16%" y="130" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">1</text>
+    </g>
+    <g id="pin-btn-2" pointer-events="all">
+      <rect x="33%" y="90" width="34%" height="60" opacity="0" pointer-events="all" />
+      <text x="50%" y="130" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">2</text>
+    </g>
+    <g id="pin-btn-3" pointer-events="all">
+      <rect x="67%" y="90" width="33%" height="60" opacity="0" pointer-events="all" />
+      <text x="83%" y="130" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">3</text>
+    </g>
+
+    <!-- Keypad Row 2 -->
+    <g id="pin-btn-4" pointer-events="all">
+      <rect x="0" y="150" width="33%" height="60" opacity="0" pointer-events="all" />
+      <text x="16%" y="190" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">4</text>
+    </g>
+    <g id="pin-btn-5" pointer-events="all">
+      <rect x="33%" y="150" width="34%" height="60" opacity="0" pointer-events="all" />
+      <text x="50%" y="190" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">5</text>
+    </g>
+    <g id="pin-btn-6" pointer-events="all">
+      <rect x="67%" y="150" width="33%" height="60" opacity="0" pointer-events="all" />
+      <text x="83%" y="190" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">6</text>
+    </g>
+
+    <!-- Keypad Row 3 -->
+    <g id="pin-btn-7" pointer-events="all">
+      <rect x="0" y="210" width="33%" height="60" opacity="0" pointer-events="all" />
+      <text x="16%" y="250" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">7</text>
+    </g>
+    <g id="pin-btn-8" pointer-events="all">
+      <rect x="33%" y="210" width="34%" height="60" opacity="0" pointer-events="all" />
+      <text x="50%" y="250" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">8</text>
+    </g>
+    <g id="pin-btn-9" pointer-events="all">
+      <rect x="67%" y="210" width="33%" height="60" opacity="0" pointer-events="all" />
+      <text x="83%" y="250" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">9</text>
+    </g>
+
+    <!-- Keypad Row 4 -->
+    <g id="pin-btn-0" pointer-events="all">
+      <rect x="33%" y="270" width="34%" height="60" opacity="0" pointer-events="all" />
+      <text x="50%" y="310" font-size="40" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">0</text>
+    </g>
+    <g id="pin-btn-back" pointer-events="all">
+      <rect x="67%" y="270" width="33%" height="60" opacity="0" pointer-events="all" />
+      <!-- Fixed Backspace: Text renders perfectly every time -->
+      <text x="83%" y="310" font-size="30" fill="#95A5A6" font-weight="bold" text-anchor="middle" pointer-events="none">DEL</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== MAIN MENU LAUNCHER (VERTICAL SCROLL) ==================== -->
+  <g id="main-menu-view" display="inline">
+    <use href="#scrollview">
+      <!-- Expanded height to 680 to fit the 9th button -->
+      <use href="#scrollview-item" height="1600">
+        <rect x="0" y="0" width="100%" height="1100" fill="black" />
+        <text x="50%" y="40" class="suite-title">App Suite</text>
+
+        <!-- Button 1: Calculator -->
+        <g id="btn-launch-calc" pointer-events="all">
+          <rect x="10%" y="60" width="80%" height="55" rx="12" ry="12" fill="#2C3E50" />
+          <text x="50%" y="95" class="suite-btn-text">Calculator</text>
+        </g>
+
+        <!-- Button 2: Cookie Clicker -->
+        <g id="btn-launch-cookie" pointer-events="all">
+          <rect x="10%" y="125" width="80%" height="55" rx="12" ry="12" fill="#D35400" />
+          <text x="50%" y="160" class="suite-btn-text">Cookie Clicker</text>
+        </g>
+
+        <!-- Button 3: 2048 -->
+        <g id="btn-launch-2048" pointer-events="all">
+          <rect x="10%" y="190" width="80%" height="55" rx="12" ry="12" fill="#27AE60" />
+          <text x="50%" y="225" class="suite-btn-text">2048 Game</text>
+        </g>
+
+        <!-- Button 4: Flappy Bird -->
+        <g id="btn-launch-flappy" pointer-events="all">
+          <rect x="10%" y="255" width="80%" height="55" rx="12" ry="12" fill="#E67E22" />
+          <text x="50%" y="290" class="suite-btn-text">Flappy Bird</text>
+        </g>
+
+        <!-- Button 5: Snake -->
+        <g id="btn-launch-snake" pointer-events="all">
+          <rect x="10%" y="320" width="80%" height="55" rx="12" ry="12" fill="#2980B9" />
+          <text x="50%" y="355" class="suite-btn-text">Snake</text>
+        </g>
+
+        <!-- Button 6: Pong -->
+        <g id="btn-launch-pong" pointer-events="all">
+          <rect x="10%" y="385" width="80%" height="55" rx="12" ry="12" fill="#8E44AD" />
+          <text x="50%" y="420" class="suite-btn-text">Pong</text>
+        </g>
+
+        <!-- Button 7: AI Assistant -->
+        <g id="btn-launch-chat" pointer-events="all">
+          <rect x="10%" y="450" width="80%" height="55" rx="12" ry="12" fill="#1ABC9C" />
+          <text x="50%" y="485" class="suite-btn-text">AI Assistant</text>
+        </g>
+
+        <!-- Button 8: Authenticator -->
+        <g id="btn-launch-auth" pointer-events="all">
+          <rect x="10%" y="515" width="80%" height="55" rx="12" ry="12" fill="#34495E" />
+          <text x="50%" y="550" class="suite-btn-text">Authenticator</text>
+        </g>
+        <!-- Button 9: Navigator -->
+        <g id="btn-launch-nav" pointer-events="all">
+          <rect x="10%" y="580" width="80%" height="55" rx="12" ry="12" fill="#E67E22" />
+          <text x="50%" y="615" class="suite-btn-text">Navigator</text>
+        </g>
+        <!-- Button 10: Tic-Tac-Toe -->
+        <g>
+          <rect x="10%" y="650" width="80%" height="55" rx="12" ry="12" fill="#9B59B6" pointer-events="none" />
+          <text x="50%" y="685" class="suite-btn-text" pointer-events="none">Tic-Tac-Toe</text>
+          <!-- The Bulletproof Hitbox -->
+          <rect id="btn-launch-ttt" x="10%" y="650" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 11: Dino Dash -->
+        <g>
+          <rect x="10%" y="720" width="80%" height="55" rx="12" ry="12" fill="#7F8C8D" pointer-events="none" />
+          <text x="50%" y="755" class="suite-btn-text" pointer-events="none">Dino Dash</text>
+          <!-- The Bulletproof Hitbox -->
+          <rect id="btn-launch-dino" x="10%" y="720" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+
+        <!-- Button 12: Tap Dunk -->
+        <g>
+          <rect x="10%" y="790" width="80%" height="55" rx="12" ry="12" fill="#E67E22" pointer-events="none" />
+          <text x="50%" y="825" class="suite-btn-text" pointer-events="none">Tap Dunk</text>
+          <rect id="btn-launch-dunk" x="10%" y="790" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 13: Phone Notes -->
+        <g>
+          <rect x="10%" y="860" width="80%" height="55" rx="12" ry="12" fill="#2980B9" pointer-events="none" />
+          <text x="50%" y="895" class="suite-btn-text" pointer-events="none">Notes</text>
+          <rect id="btn-launch-notes" x="10%" y="860" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 14: Wrist Rhythm -->
+        <g>
+          <rect x="10%" y="930" width="80%" height="55" rx="12" ry="12" fill="#E74C3C" pointer-events="none" />
+          <text x="50%" y="965" class="suite-btn-text" pointer-events="none">Wrist Rhythm</text>
+          <rect id="btn-launch-rhythm" x="10%" y="930" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+        <!-- Button 15: Neon Hop -->
+        <g>
+          <rect x="10%" y="1000" width="80%" height="55" rx="12" ry="12" fill="#9C27B0" pointer-events="none" />
+          <text x="50%" y="1035" class="suite-btn-text" pointer-events="none">Neon Hop</text>
+          <rect id="btn-launch-hop" x="10%" y="1000" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 16: Vector Golf -->
+        <g>
+          <rect x="10%" y="1070" width="80%" height="55" rx="12" ry="12" fill="#4CAF50" pointer-events="none" />
+          <text x="50%" y="1105" class="suite-btn-text" pointer-events="none">Vector Golf</text>
+          <rect id="btn-launch-golf" x="10%" y="1070" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 17: Wrist Slicer -->
+        <g>
+          <rect x="10%" y="1210" width="80%" height="55" rx="12" ry="12" fill="#E67E22" pointer-events="none" />
+          <text x="50%" y="1245" class="suite-btn-text" pointer-events="none">Wrist Slicer</text>
+          <rect id="btn-launch-slicer" x="10%" y="1210" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 18: Abyss Fall -->
+        <g>
+          <rect x="10%" y="1140" width="80%" height="55" rx="12" ry="12" fill="#00BCD4" pointer-events="none" />
+          <text x="50%" y="1175" class="suite-btn-text" pointer-events="none">Abyss Fall</text>
+          <rect id="btn-launch-abyss" x="10%" y="1140" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+  	<!-- Button 19: Neon Drop -->
+  	<g>
+          <rect x="10%" y="1280" width="80%" height="55" rx="12" ry="12" fill="#9B59B6" pointer-events="none" />
+   	  <text x="50%" y="1315" class="suite-btn-text" pointer-events="none">Neon Drop</text>
+          <rect id="btn-launch-neon" x="10%" y="1280" width="80%" height="55" opacity="0" pointer-events="all" />
+  	</g>
+
+
+        <!-- Button 20: Neon Stack -->
+        <g>
+          <rect x="10%" y="1350" width="80%" height="55" rx="12" ry="12" fill="#D32F2F" pointer-events="none" />
+          <text x="50%" y="1385" class="suite-btn-text" pointer-events="none">Neon Stack</text>
+          <rect id="btn-launch-stack" x="10%" y="1350" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 21: Neon Racer -->
+        <g>
+          <rect x="10%" y="1420" width="80%" height="55" rx="12" ry="12" fill="#E91E63" pointer-events="none" />
+          <text x="50%" y="1455" class="suite-btn-text" pointer-events="none">Neon Racer</text>
+          <rect id="btn-launch-racer" x="10%" y="1420" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+        <!-- Button 22: Command Rush -->
+        <g>
+          <rect x="10%" y="1490" width="80%" height="55" rx="12" ry="12" fill="#FF9800" pointer-events="none" />
+          <text x="50%" y="1525" class="suite-btn-text" pointer-events="none" fill="#000000">Command Rush</text>
+          <rect id="btn-launch-rush" x="10%" y="1490" width="80%" height="55" opacity="0" pointer-events="all" />
+        </g>
+
+
+      </use>
+    </use>
+  </g>
+
+  <!-- ==================== APP 1: CALCULATOR ==================== -->
+  <g id="calc-app-view" display="none">
+    <rect x="0" y="0" width="100%" height="100%" fill="#111111" />
+    <text id="calc-display" x="90%" y="45" class="calc-display-text" text-length="32">0</text>
+    <g id="calc-btn-c" pointer-events="all"><rect x="95" y="60" width="70" height="45" rx="8" ry="8" fill="#E74C3C" /><text x="130" y="91" class="calc-key">C</text></g>
+    <g id="calc-btn-del" pointer-events="all"><rect x="175" y="60" width="70" height="45" rx="8" ry="8" fill="#7F8C8D" /><text x="210" y="91" class="calc-key">⌫</text></g>
+    <g id="calc-btn-div" pointer-events="all"><rect x="255" y="60" width="70" height="45" rx="8" ry="8" fill="#F39C12" /><text x="290" y="91" class="calc-key">÷</text></g>
+    <g id="calc-btn-7" pointer-events="all"><rect x="15" y="115" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="50" y="146" class="calc-key">7</text></g>
+    <g id="calc-btn-8" pointer-events="all"><rect x="95" y="115" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="130" y="146" class="calc-key">8</text></g>
+    <g id="calc-btn-9" pointer-events="all"><rect x="175" y="115" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="210" y="146" class="calc-key">9</text></g>
+    <g id="calc-btn-mul" pointer-events="all"><rect x="255" y="115" width="70" height="45" rx="8" ry="8" fill="#F39C12" /><text x="290" y="146" class="calc-key">×</text></g>
+    <g id="calc-btn-4" pointer-events="all"><rect x="15" y="170" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="50" y="201" class="calc-key">4</text></g>
+    <g id="calc-btn-5" pointer-events="all"><rect x="95" y="170" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="130" y="201" class="calc-key">5</text></g>
+    <g id="calc-btn-6" pointer-events="all"><rect x="175" y="170" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="210" y="201" class="calc-key">6</text></g>
+    <g id="calc-btn-sub" pointer-events="all"><rect x="255" y="170" width="70" height="45" rx="8" ry="8" fill="#F39C12" /><text x="290" y="201" class="calc-key">-</text></g>
+    <g id="calc-btn-1" pointer-events="all"><rect x="15" y="225" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="50" y="256" class="calc-key">1</text></g>
+    <g id="calc-btn-2" pointer-events="all"><rect x="95" y="225" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="130" y="256" class="calc-key">2</text></g>
+    <g id="calc-btn-3" pointer-events="all"><rect x="175" y="225" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="210" y="256" class="calc-key">3</text></g>
+    <g id="calc-btn-add" pointer-events="all"><rect x="255" y="225" width="70" height="45" rx="8" ry="8" fill="#F39C12" /><text x="290" y="256" class="calc-key">+</text></g>
+    <g id="calc-btn-0" pointer-events="all"><rect x="15" y="280" width="150" height="45" rx="8" ry="8" fill="#34495E" /><text x="90" y="311" class="calc-key">0</text></g>
+    <g id="calc-btn-dot" pointer-events="all"><rect x="175" y="280" width="70" height="45" rx="8" ry="8" fill="#34495E" /><text x="210" y="311" class="calc-key">.</text></g>
+    <g id="calc-btn-eq" pointer-events="all"><rect x="255" y="280" width="70" height="45" rx="8" ry="8" fill="#2ECC71" /><text x="290" y="311" class="calc-key">=</text></g>
+  </g>
+
+  <!-- ==================== APP 2: COOKIE CLICKER ==================== -->
+  <g id="cookie-app-view" display="none">
+    <rect x="0" y="0" width="100%" height="100%" fill="#2C1D11" />
+    <text id="cookie-count-text" x="50%" y="45" class="cookie-count" text-length="24">0 Cookies</text>
+    <text id="cookie-cps-text" x="50%" y="70" class="cookie-cps" text-length="24">per sec: 0</text>
+    <image id="cookie-click-target" x="25%" y="85" width="50%" height="160" href="cookie.png" pointer-events="all" />
+    <g id="cookie-btn-buy" pointer-events="all">
+      <rect x="10%" y="260" width="80%" height="45" rx="10" ry="10" fill="#D35400" />
+      <text id="cookie-buy-label" x="50%" y="288" class="cookie-buy-text" text-length="32">Buy Auto-Clicker (10 C)</text>
+    </g>
+  </g>
+
+  <!-- ==================== APP 3: 2048 GAME ==================== -->
+  <g id="game2048-app-view" display="none">
+    <rect x="0" y="0" width="100%" height="100%" fill="#FAF8EF" />
+    <text id="g2048-score" x="50%" y="35" class="g2048-score" text-length="20">Score: 0</text>
+    <rect id="g2048-touch-surface" x="38" y="55" width="260" height="260" fill="#BBADA0" rx="6" ry="6" pointer-events="all" />
+    <g id="g2048-tiles" pointer-events="none">
+      <rect id="tbg-0" x="46" y="63" width="55" height="55" rx="4" ry="4"/><text id="ttxt-0" x="73" y="100" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-1" x="109" y="63" width="55" height="55" rx="4" ry="4"/><text id="ttxt-1" x="136" y="100" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-2" x="172" y="63" width="55" height="55" rx="4" ry="4"/><text id="ttxt-2" x="199" y="100" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-3" x="235" y="63" width="55" height="55" rx="4" ry="4"/><text id="ttxt-3" x="262" y="100" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-4" x="46" y="126" width="55" height="55" rx="4" ry="4"/><text id="ttxt-4" x="73" y="163" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-5" x="109" y="126" width="55" height="55" rx="4" ry="4"/><text id="ttxt-5" x="136" y="163" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-6" x="172" y="126" width="55" height="55" rx="4" ry="4"/><text id="ttxt-6" x="199" y="163" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-7" x="235" y="126" width="55" height="55" rx="4" ry="4"/><text id="ttxt-7" x="262" y="163" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-8" x="46" y="189" width="55" height="55" rx="4" ry="4"/><text id="ttxt-8" x="73" y="226" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-9" x="109" y="189" width="55" height="55" rx="4" ry="4"/><text id="ttxt-9" x="136" y="226" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-10" x="172" y="189" width="55" height="55" rx="4" ry="4"/><text id="ttxt-10" x="199" y="226" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-11" x="235" y="189" width="55" height="55" rx="4" ry="4"/><text id="ttxt-11" x="262" y="226" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-12" x="46" y="252" width="55" height="55" rx="4" ry="4"/><text id="ttxt-12" x="73" y="289" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-13" x="109" y="252" width="55" height="55" rx="4" ry="4"/><text id="ttxt-13" x="136" y="289" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-14" x="172" y="252" width="55" height="55" rx="4" ry="4"/><text id="ttxt-14" x="199" y="289" class="g2048-score" text-length="5"></text>
+      <rect id="tbg-15" x="235" y="252" width="55" height="55" rx="4" ry="4"/><text id="ttxt-15" x="262" y="289" class="g2048-score" text-length="5"></text>
+    </g>
+  </g>
+
+  <!-- ==================== APP 4: FLAPPY BIRD ==================== -->
+  <g id="flappy-app-view" display="none">
+    <rect x="0" y="0" width="100%" height="100%" fill="#71C5CF" />
+    <rect id="fb-pipe-top-0-body" x="339" y="0" width="44" height="80" fill="#2ECC71" />
+    <rect id="fb-pipe-top-0-cap" x="336" y="80" width="50" height="20" rx="3" ry="3" fill="#27AE60" />
+    <rect id="fb-pipe-bot-0-cap" x="336" y="220" width="50" height="20" rx="3" ry="3" fill="#27AE60" />
+    <rect id="fb-pipe-bot-0-body" x="339" y="240" width="44" height="50" fill="#2ECC71" />
+    <rect id="fb-pipe-top-1-body" x="539" y="0" width="44" height="80" fill="#2ECC71" />
+    <rect id="fb-pipe-top-1-cap" x="536" y="80" width="50" height="20" rx="3" ry="3" fill="#27AE60" />
+    <rect id="fb-pipe-bot-1-cap" x="536" y="220" width="50" height="20" rx="3" ry="3" fill="#27AE60" />
+    <rect id="fb-pipe-bot-1-body" x="539" y="240" width="44" height="50" fill="#2ECC71" />
+    <rect x="0" y="290" width="100%" height="46" fill="#D35400" />
+    <rect x="0" y="290" width="100%" height="10" fill="#27AE60" />
+    <image id="fb-bird" x="50" y="150" width="40" height="40" href="bird.png" />
+    <text id="fb-score" x="50%" y="60" font-size="44" font-weight="bold" fill="white" text-anchor="middle" text-length="10">0</text>
+    <text id="fb-high-score" x="50%" y="90" font-size="22" font-weight="bold" fill="#F1C40F" text-anchor="middle" text-length="20">Best: 0</text>
+    <text id="fb-msg" x="50%" y="180" font-size="30" font-weight="bold" fill="white" text-anchor="middle" text-length="20">Tap to Start</text>
+    <rect id="fb-touch" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+  </g>
+
+  <!-- ==================== APP 5: SNAKE ==================== -->
+  <g id="snake-app-view" display="none">
+    <rect width="100%" height="100%" fill="#111111" />
+    <rect x="18" y="36" width="300" height="300" fill="#000000" />
+    <text id="snk-score" x="50%" y="30" class="suite-btn-text" text-length="20">Score: 0</text>
+    <text id="snk-msg" x="50%" y="180" class="suite-title" text-length="20">Tap to Start</text>
+    <rect id="snk-food" x="0" y="0" width="15" height="15" fill="#E74C3C" display="none" />
+    <g id="snk-body-group">
+      <rect id="sb-0" width="15" height="15" fill="#2ECC71" display="none"/> <rect id="sb-1" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-2" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-3" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-4" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-5" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-6" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-7" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-8" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-9" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-10" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-11" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-12" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-13" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-14" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-15" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-16" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-17" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-18" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-19" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-20" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-21" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-22" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-23" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-24" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-25" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-26" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-27" width="15" height="15" fill="#27AE60" display="none"/>
+      <rect id="sb-28" width="15" height="15" fill="#27AE60" display="none"/> <rect id="sb-29" width="15" height="15" fill="#27AE60" display="none"/>
+    </g>
+    <rect id="snk-up" x="18" y="36" width="300" height="100" opacity="0" pointer-events="all" />
+    <rect id="snk-down" x="18" y="236" width="300" height="100" opacity="0" pointer-events="all" />
+    <rect id="snk-left" x="18" y="136" width="100" height="100" opacity="0" pointer-events="all" />
+    <rect id="snk-right" x="218" y="136" width="100" height="100" opacity="0" pointer-events="all" />
+    <rect id="snk-start" x="118" y="136" width="100" height="100" opacity="0" pointer-events="all" />
+  </g>
+
+  <!-- ==================== APP 6: PONG ==================== -->
+  <g id="pong-app-view" display="none">
+    <rect width="100%" height="100%" fill="#000000" />
+    <line x1="50%" y1="0" x2="50%" y2="100%" fill="white" stroke-width="2" stroke-dasharray="10,10" />
+    <text id="pong-score-p1" x="25%" y="50" class="pong-score" text-length="2">0</text>
+    <text id="pong-score-p2" x="75%" y="50" class="pong-score" text-length="2">0</text>
+    <rect id="pong-pad-1" x="10" y="140" width="10" height="70" rx="3" ry="3" fill="#FFFFFF" />
+    <rect id="pong-pad-2" x="316" y="140" width="10" height="70" rx="3" ry="3" fill="#FFFFFF" />
+    <circle id="pong-ball" cx="168" cy="168" r="8" fill="#F1C40F" />
+    <text id="pong-msg" x="50%" y="180" class="suite-title" text-length="20">Tap to Start</text>
+    <rect id="pong-touch-up" x="0" y="0" width="168" height="168" opacity="0" pointer-events="all" />
+    <rect id="pong-touch-down" x="0" y="168" width="168" height="168" opacity="0" pointer-events="all" />
+  </g>
+
+  <!-- ==================== APP 7: AI ASSISTANT (FIXED MARGINS & VIEW TOGGLE) ==================== -->
+  <g id="chat-app-view" display="none">
+    <rect x="0" y="0" width="100%" height="100%" fill="#202124" />
+    
+    <!-- VIEW 1: KEYBOARD & INPUT -->
+    <g id="chat-keyboard-view" display="inline">
+      <!-- Pushed down to y="50" and shifted right to x="85" to clear the 100x100 back button zone -->
+      <text x="85" y="48" font-size="14" fill="#1ABC9C">Draft Prompt:</text>
+      <textarea id="chat-input-preview" x="15" y="55" width="306" height="50" font-size="16" fill="#ECF0F1" text-length="200">Type below...</textarea>
+      
+      <!-- View History Button (Shifted down alongside it) -->
+      <g id="chat-btn-view-history" pointer-events="all">
+        <rect x="190" y="24" width="130" height="28" rx="4" ry="4" fill="#34495E" />
+        <text x="255" y="42" font-size="13" fill="white" text-anchor="middle">View History 💬</text>
+      </g>
+
+      <!-- 3x4 Phone Keypad Grid (Shifted slightly down to match the new layout) -->
+      <g id="chat-btn-1" pointer-events="all"><rect x="15" y="115" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="64" y="140" font-size="18" fill="white" text-anchor="middle">1 . , ?</text></g>
+      <g id="chat-btn-2" pointer-events="all"><rect x="119" y="115" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="168" y="140" font-size="18" fill="white" text-anchor="middle">2 ABC</text></g>
+      <g id="chat-btn-3" pointer-events="all"><rect x="223" y="115" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="272" y="140" font-size="18" fill="white" text-anchor="middle">3 DEF</text></g>
+
+      <g id="chat-btn-4" pointer-events="all"><rect x="15" y="157" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="64" y="182" font-size="18" fill="white" text-anchor="middle">4 GHI</text></g>
+      <g id="chat-btn-5" pointer-events="all"><rect x="119" y="157" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="168" y="182" font-size="18" fill="white" text-anchor="middle">5 JKL</text></g>
+      <g id="chat-btn-6" pointer-events="all"><rect x="223" y="157" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="272" y="182" font-size="18" fill="white" text-anchor="middle">6 MNO</text></g>
+
+      <g id="chat-btn-7" pointer-events="all"><rect x="15" y="199" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="64" y="224" font-size="18" fill="white" text-anchor="middle">7 PQRS</text></g>
+      <g id="chat-btn-8" pointer-events="all"><rect x="119" y="199" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="168" y="224" font-size="18" fill="white" text-anchor="middle">8 TUV</text></g>
+      <g id="chat-btn-9" pointer-events="all"><rect x="223" y="199" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="272" y="224" font-size="18" fill="white" text-anchor="middle">9 WXYZ</text></g>
+
+      <g id="chat-btn-star" pointer-events="all"><rect x="15" y="241" width="98" height="39" rx="6" ry="6" fill="#C0392B" /><text x="64" y="266" font-size="18" fill="white" text-anchor="middle">* DEL</text></g>
+      <g id="chat-btn-0" pointer-events="all"><rect x="119" y="241" width="98" height="39" rx="6" ry="6" fill="#34495E" /><text x="168" y="266" font-size="18" fill="white" text-anchor="middle">0 SPC</text></g>
+      <g id="chat-btn-hash" pointer-events="all"><rect x="223" y="241" width="98" height="39" rx="6" ry="6" fill="#7F8C8D" /><text x="272" y="266" font-size="18" fill="white" text-anchor="middle"># NEXT</text></g>
+
+      <g id="chat-btn-send" pointer-events="all">
+        <rect x="15" y="283" width="306" height="38" rx="6" ry="6" fill="#27AE60" />
+        <text x="168" y="308" font-size="16" font-weight="bold" fill="white" text-anchor="middle">SEND PROMPT</text>
+      </g>
+    </g>
+    <!-- VIEW 2: SCROLLABLE CHAT HISTORY & RESPONSES -->
+    <g id="chat-history-view" display="none">
+      <!-- Top Utility Bar -->
+      <rect x="0" y="0" width="100%" height="40" fill="#111111" />
+      
+      <!-- Keyboard Toggle Button (Shifted right past the 60x60 back button zone) -->
+      <g id="chat-btn-show-keyboard" pointer-events="all">
+        <rect x="65" y="5" width="110" height="30" rx="4" ry="4" fill="#2980B9" />
+        <text x="120" y="25" font-size="13" fill="white" text-anchor="middle">⌨️ Keyboard</text>
+      </g>
+
+      <!-- New Chat Button -->
+      <g id="chat-btn-new-chat" pointer-events="all">
+        <rect x="185" y="5" width="130" height="30" rx="4" ry="4" fill="#C0392B" />
+        <text x="250" y="25" font-size="13" fill="white" text-anchor="middle">🗑️ New Chat</text>
+      </g>
+
+      <!-- Scrollable Area -->
+      <use href="#scrollview" x="0" y="45" width="100%" height="275">
+        <use href="#scrollview-item" height="600">
+          <rect x="0" y="0" width="100%" height="600" fill="#202124" />
+          <textarea id="chat-history-text" x="15" y="10" width="306" height="580" font-size="16" fill="#ECF0F1" text-length="1000">No conversation yet. Type a message using the keyboard!</textarea>
+        </use>
+      </use>
+    </g>
+  </g>
+
+
+  <!-- ==================== APP 8: STANDALONE MESSAGING ==================== -->
+  <g id="msg-app-view" display="none">
+    <rect x="0" y="0" width="100%" height="100%" fill="#202124" />
+    
+    <!-- VIEW 1: KEYBOARD & INPUT -->
+    <g id="msg-keyboard-view" display="inline">
+      <text x="85" y="48" font-size="14" fill="#25D366">Draft Message:</text>
+      <textarea id="msg-input-preview" x="15" y="55" width="306" height="45" font-size="16" fill="#ECF0F1" text-length="200">Type below...</textarea>
+      
+      <g id="msg-btn-view-history" pointer-events="all">
+        <rect x="190" y="24" width="130" height="28" rx="4" ry="4" fill="#34495E" />
+        <text x="255" y="42" font-size="13" fill="white" text-anchor="middle">View Log 💬</text>
+      </g>
+
+      <!-- Keypad Grid -->
+      <g id="msg-btn-1" pointer-events="all"><rect x="15" y="105" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="64" y="129" font-size="18" fill="white" text-anchor="middle">1 .</text></g>
+      <g id="msg-btn-2" pointer-events="all"><rect x="119" y="105" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="168" y="129" font-size="18" fill="white" text-anchor="middle">2 ABC</text></g>
+      <g id="msg-btn-3" pointer-events="all"><rect x="223" y="105" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="272" y="129" font-size="18" fill="white" text-anchor="middle">3 DEF</text></g>
+
+      <g id="msg-btn-4" pointer-events="all"><rect x="15" y="147" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="64" y="171" font-size="18" fill="white" text-anchor="middle">4 GHI</text></g>
+      <g id="msg-btn-5" pointer-events="all"><rect x="119" y="147" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="168" y="171" font-size="18" fill="white" text-anchor="middle">5 JKL</text></g>
+      <g id="msg-btn-6" pointer-events="all"><rect x="223" y="147" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="272" y="171" font-size="18" fill="white" text-anchor="middle">6 MNO</text></g>
+
+      <g id="msg-btn-7" pointer-events="all"><rect x="15" y="189" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="64" y="213" font-size="18" fill="white" text-anchor="middle">7 PQRS</text></g>
+      <g id="msg-btn-8" pointer-events="all"><rect x="119" y="189" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="168" y="213" font-size="18" fill="white" text-anchor="middle">8 TUV</text></g>
+      <g id="msg-btn-9" pointer-events="all"><rect x="223" y="189" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="272" y="213" font-size="18" fill="white" text-anchor="middle">9 WXYZ</text></g>
+
+      <g id="msg-btn-star" pointer-events="all"><rect x="15" y="231" width="98" height="38" rx="6" ry="6" fill="#C0392B" /><text x="64" y="255" font-size="18" fill="white" text-anchor="middle">* DEL</text></g>
+      <g id="msg-btn-0" pointer-events="all"><rect x="119" y="231" width="98" height="38" rx="6" ry="6" fill="#34495E" /><text x="168" y="255" font-size="18" fill="white" text-anchor="middle">0 SPC</text></g>
+      <g id="msg-btn-hash" pointer-events="all"><rect x="223" y="231" width="98" height="38" rx="6" ry="6" fill="#7F8C8D" /><text x="272" y="255" font-size="18" fill="white" text-anchor="middle"># NEXT</text></g>
+
+      <g id="msg-btn-goto-contacts" pointer-events="all">
+        <rect x="15" y="274" width="306" height="38" rx="6" ry="6" fill="#25D366" />
+        <text x="168" y="299" font-size="15" font-weight="bold" fill="white" text-anchor="middle">SELECT CONTACT &amp; SEND</text>
+      </g>
+    </g>
+
+    <!-- VIEW 2: CONTACT SELECTOR (Mom & Dad) -->
+    <g id="msg-contact-view" display="none">
+      <rect x="0" y="0" width="100%" height="100%" fill="#202124" />
+      <text x="50%" y="35" font-size="16" fill="#25D366" text-anchor="middle">Select WhatsApp Contact:</text>
+      <g id="wa-contact-1" pointer-events="all">
+        <rect x="20" y="65" width="296" height="50" rx="8" ry="8" fill="#34495E" />
+        <text x="168" y="97" font-size="20" fill="white" text-anchor="middle">Mom ⭐</text>
+      </g>
+      <g id="wa-contact-2" pointer-events="all">
+        <rect x="20" y="130" width="296" height="50" rx="8" ry="8" fill="#34495E" />
+        <text x="168" y="162" font-size="20" fill="white" text-anchor="middle">Dad 👔</text>
+      </g>
+      <g id="msg-btn-back-keyboard" pointer-events="all">
+        <rect x="20" y="245" width="296" height="45" rx="8" ry="8" fill="#C0392B" />
+        <text x="168" y="273" font-size="18" fill="white" text-anchor="middle">◀ Back to Keyboard</text>
+      </g>
+    </g>
+
+    <!-- VIEW 3: HISTORY / LOG -->
+    <g id="msg-history-view" display="none">
+      <rect x="0" y="0" width="100%" height="40" fill="#111111" />
+      <g id="msg-btn-show-keyboard" pointer-events="all">
+        <rect x="65" y="5" width="110" height="30" rx="4" ry="4" fill="#2980B9" />
+        <text x="120" y="25" font-size="13" fill="white" text-anchor="middle">⌨️ Keyboard</text>
+      </g>
+      <g id="msg-btn-new-chat" pointer-events="all">
+        <rect x="185" y="5" width="130" height="30" rx="4" ry="4" fill="#C0392B" />
+        <text x="250" y="25" font-size="13" fill="white" text-anchor="middle">🗑️ Clear Log</text>
+      </g>
+      <use href="#scrollview" x="0" y="45" width="100%" height="275">
+        <use href="#scrollview-item" height="600">
+          <rect x="0" y="0" width="100%" height="600" fill="#202124" />
+          <textarea id="msg-history-text" x="15" y="10" width="306" height="580" font-size="16" fill="#ECF0F1" text-length="1000">No messages sent yet.</textarea>
+        </use>
+      </use>
+    </g>
+  </g>
+
+  <!-- ==================== APP 9: AUTHENTICATOR (Renumbered in structure to match order) ==================== -->
+  <g id="auth-app-view" display="none">
+    <rect x="0" y="0" width="100%" height="100%" fill="#111111" />
+    
+    <!-- Account Name -->
+    <text id="auth-account-name" x="50%" y="80" font-size="28" fill="#3498DB" font-weight="bold" text-anchor="middle">My Account</text>
+    
+    <!-- 6-Digit Code (Fixed Memory Buffer using text-length="10") -->
+    <text id="auth-code" x="50%" y="160" font-size="64" fill="#ECF0F1" font-weight="bold" text-anchor="middle" text-length="10">000 000</text>
+    
+    <!-- 30-Second Progress Bar -->
+    <rect x="10%" y="220" width="80%" height="10" rx="5" ry="5" fill="#333333" />
+    <rect id="auth-timer-bar" x="10%" y="220" width="80%" height="10" rx="5" ry="5" fill="#2ECC71" />
+    
+    <text x="50%" y="265" font-size="18" fill="#7F8C8D" text-anchor="middle">Works completely offline</text>
+  </g>
+
+
+<!-- ==================== APP 9: NAVIGATOR ==================== -->
+  <g id="nav-app-view" display="none">
+    <rect width="100%" height="100%" fill="#111111" />
+    
+    <text id="nav-status" x="50%" y="40" font-size="20" fill="#F1C40F" text-anchor="middle">Acquiring GPS...</text>
+    <text id="nav-dist" x="50%" y="85" font-size="45" font-weight="bold" fill="white" text-anchor="middle">0m</text>
+
+    <!-- Compass / Radar Graphic -->
+    <!-- Centered at x=168, y=175 (Fitbit Versa 4 center) -->
+    <g transform="translate(168, 175)">
+      <!-- Radar Rings -->
+      <circle cx="0" cy="0" r="70" fill="none" stroke="#333333" stroke-width="4" />
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#333333" stroke-width="2" />
+      
+      <!-- The Dynamic Arrow (Rotates via Code) -->
+      <g id="nav-arrow">
+        <polygon points="0,-50 20,30 0,15 -20,30" fill="#E74C3C" />
+      </g>
+    </g>
+
+<!-- Controls (With Bulletproof Hitboxes!) -->
+    <g>
+      <!-- Visuals -->
+      <rect x="20" y="280" width="130" height="45" rx="8" fill="#2ECC71" pointer-events="none" />
+      <text x="85" y="308" font-size="18" font-weight="bold" fill="white" text-anchor="middle" pointer-events="none">Drop Pin 📍</text>
+      <!-- Hitbox layered on top -->
+      <rect id="nav-btn-mark" x="20" y="280" width="130" height="45" opacity="0" pointer-events="all" />
+    </g>
+    
+    <g>
+      <!-- Visuals -->
+      <rect x="186" y="280" width="130" height="45" rx="8" fill="#E74C3C" pointer-events="none" />
+      <text x="251" y="308" font-size="18" font-weight="bold" fill="white" text-anchor="middle" pointer-events="none">Clear Pin ❌</text>
+      <!-- Hitbox layered on top -->
+      <rect id="nav-btn-clear" x="186" y="280" width="130" height="45" opacity="0" pointer-events="all" />
+    </g>
+  </g>
+
+<!-- ==================== APP 10: TIC-TAC-TOE ==================== -->
+  <g id="ttt-app-view" display="none">
+    <rect width="100%" height="100%" fill="#111111" />
+    <text id="ttt-status" x="50%" y="40" font-size="26" fill="white" font-weight="bold" text-anchor="middle" text-length="32">Select Mode</text>
+
+    <!-- MENU SCREEN -->
+    <g id="ttt-menu-group" display="inline">
+      <g>
+        <rect x="50%-100" y="100" width="200" height="60" rx="10" fill="#3498DB" pointer-events="none" />
+        <text x="50%" y="138" font-size="24" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">1 Player (Bot)</text>
+        <rect id="ttt-btn-1p" x="50%-100" y="100" width="200" height="60" opacity="0" pointer-events="all" />
+      </g>
+      <g>
+        <rect x="50%-100" y="180" width="200" height="60" rx="10" fill="#E67E22" pointer-events="none" />
+        <text x="50%" y="218" font-size="24" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">2 Player (Local)</text>
+        <rect id="ttt-btn-2p" x="50%-100" y="180" width="200" height="60" opacity="0" pointer-events="all" />
+      </g>
+    </g>
+
+    <!-- GAME BOARD SCREEN -->
+    <g id="ttt-game-group" display="none">
+      <!-- Grid Lines -->
+      <rect x="126" y="50" width="4" height="240" fill="white" />
+      <rect x="206" y="50" width="4" height="240" fill="white" />
+      <rect x="48" y="128" width="240" height="4" fill="white" />
+      <rect x="48" y="208" width="240" height="4" fill="white" />
+
+      <!-- 9 Tap Cells (0-8) -->
+      <!-- Row 1 -->
+      <g><text id="ttt-txt-0" x="88" y="112" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-0" x="48" y="50" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <g><text id="ttt-txt-1" x="168" y="112" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-1" x="128" y="50" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <g><text id="ttt-txt-2" x="248" y="112" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-2" x="208" y="50" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <!-- Row 2 -->
+      <g><text id="ttt-txt-3" x="88" y="192" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-3" x="48" y="130" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <g><text id="ttt-txt-4" x="168" y="192" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-4" x="128" y="130" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <g><text id="ttt-txt-5" x="248" y="192" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-5" x="208" y="130" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <!-- Row 3 -->
+      <g><text id="ttt-txt-6" x="88" y="272" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-6" x="48" y="210" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <g><text id="ttt-txt-7" x="168" y="272" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-7" x="128" y="210" width="76" height="76" opacity="0" pointer-events="all" /></g>
+      <g><text id="ttt-txt-8" x="248" y="272" font-size="55" fill="white" font-weight="bold" text-anchor="middle" text-length="4" pointer-events="none"></text><rect id="ttt-cell-8" x="208" y="210" width="76" height="76" opacity="0" pointer-events="all" /></g>
+
+      <!-- Back / Reset Button -->
+      <g>
+        <rect x="50%-60" y="295" width="120" height="35" rx="8" fill="#E74C3C" pointer-events="none" />
+        <text x="50%" y="320" font-size="20" fill="white" font-weight="bold" text-anchor="middle" pointer-events="none">Menu</text>
+        <rect id="ttt-btn-reset" x="50%-60" y="295" width="120" height="35" opacity="0" pointer-events="all" />
+      </g>
+    </g>
+  </g>
+
+<!-- ==================== APP 11: DINO DASH ==================== -->
+  <g id="dino-app-view" display="none">
+    <rect width="100%" height="100%" fill="#F7F7F7" /> 
+
+<!-- Scores (Pushed left and down to clear the curved screen) -->
+    <text id="dino-score" x="100%-35" y="45" font-size="24" fill="#535353" font-family="System-Regular" font-weight="bold" text-anchor="end" text-length="8">00000</text>
+    <text id="dino-hi-score" x="100%-125" y="45" font-size="24" fill="#A0A0A0" font-family="System-Regular" font-weight="bold" text-anchor="end" text-length="12">HI 00000</text>
+
+<!-- The Ground -->
+    <rect x="0" y="240" width="100%" height="3" fill="#535353" />
+
+    <!-- STANDING DINO -->
+    <g id="dino-stand" transform="translate(40, 195)" display="inline">
+      <rect x="10" y="0" width="24" height="35" fill="#535353" rx="2" /> <!-- Body -->
+      <rect x="25" y="0" width="18" height="15" fill="#535353" rx="2" /> <!-- Snout -->
+      <rect x="-5" y="10" width="20" height="8" fill="#535353" rx="2" />  <!-- Tail -->
+      <circle cx="32" cy="5" r="2.5" fill="#F7F7F7" />                 <!-- Eye -->
+      <rect x="12" y="35" width="6" height="10" fill="#535353" />        <!-- L-Leg -->
+      <rect x="22" y="35" width="6" height="10" fill="#535353" />        <!-- R-Leg -->
+    </g>
+
+    <!-- DUCKING DINO -->
+    <g id="dino-duck" transform="translate(40, 215)" display="none">
+      <rect x="0" y="10" width="45" height="20" fill="#535353" rx="2" /> <!-- Body -->
+      <rect x="40" y="10" width="18" height="12" fill="#535353" rx="2" /> <!-- Snout -->
+      <rect x="-10" y="15" width="20" height="8" fill="#535353" rx="2" /> <!-- Tail -->
+      <circle cx="48" cy="14" r="2" fill="#F7F7F7" />                  <!-- Eye -->
+      <rect x="10" y="30" width="6" height="8" fill="#535353" />         <!-- L-Leg -->
+      <rect x="30" y="30" width="6" height="8" fill="#535353" />         <!-- R-Leg -->
+    </g>
+
+    <!-- Obstacles -->
+    <rect id="dino-obs-0" x="-100" y="200" width="20" height="40" fill="#535353" rx="4" display="none" />
+    <rect id="dino-obs-1" x="-100" y="210" width="35" height="15" fill="#535353" rx="4" display="none" />
+
+    <!-- Game Over Screen -->
+    <g id="dino-game-over" display="none">
+      <text x="50%" y="120" font-size="30" fill="#535353" font-weight="bold" text-anchor="middle">GAME OVER</text>
+      <text x="50%" y="160" font-size="20" fill="#535353" text-anchor="middle">Tap to Restart</text>
+    </g>
+
+    <!-- The Massive Swipe/Tap Controller -->
+    <rect id="dino-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+    
+    <!-- Exit Button (Top Left) -->
+    <g pointer-events="all" id="dino-btn-exit">
+      <rect x="0" y="0" width="80" height="80" opacity="0" />
+      <text x="15" y="35" font-size="24" fill="#535353" font-weight="bold" pointer-events="none">X</text>
+    </g>
+  </g>
+
+<!-- ==================== APP 12: TAP DUNK ==================== -->
+  <g id="dunk-app-view" display="none">
+    <rect width="100%" height="100%" fill="#2C3E50" /> <!-- Dark Blue Gym Background -->
+
+    <!-- Score & Text (Pushed left & down to avoid curved screen) -->
+    <text id="dunk-score" x="100%-45" y="55" font-size="28" fill="white" font-weight="bold" text-anchor="end" text-length="8">0</text>
+    <text id="dunk-hi-score" x="100%-135" y="55" font-size="20" fill="#BDC3C7" text-anchor="end" text-length="12">HI 0</text>
+    <text id="dunk-msg" x="50%" y="100" font-size="24" fill="#F1C40F" font-weight="bold" text-anchor="middle" display="none" text-length="20">PERFECT +3!</text>
+
+    <!-- The Hoop Group (Moves Horizontally - 90px wide) -->
+    <g id="dunk-hoop-group" transform="translate(350, 150)">
+      
+      <!-- Glass Backboard -->
+      <rect x="90" y="-50" width="10" height="90" fill="#FFFFFF" opacity="0.3" rx="3" />
+      <rect x="92" y="-15" width="4" height="25" fill="#E74C3C" />
+
+      <!-- The Net (Crash-Proof Line Engine version) -->
+      <!-- Outer boundary -->
+      <line x1="0" y1="0" x2="15" y2="50" stroke="#BDC3C7" stroke-width="2" />
+      <line x1="15" y1="50" x2="75" y2="50" stroke="#BDC3C7" stroke-width="2" />
+      <line x1="75" y1="50" x2="90" y2="0" stroke="#BDC3C7" stroke-width="2" />
+      
+      <!-- Inner Vertical Weaves -->
+      <line x1="15" y1="0" x2="25" y2="50" stroke="#BDC3C7" stroke-width="1" />
+      <line x1="30" y1="0" x2="35" y2="50" stroke="#BDC3C7" stroke-width="1" />
+      <line x1="45" y1="0" x2="45" y2="50" stroke="#BDC3C7" stroke-width="1" />
+      <line x1="60" y1="0" x2="55" y2="50" stroke="#BDC3C7" stroke-width="1" />
+      <line x1="75" y1="0" x2="65" y2="50" stroke="#BDC3C7" stroke-width="1" />
+      
+      <!-- Inner Horizontal Weaves -->
+      <line x1="5" y1="15" x2="85" y2="15" stroke="#BDC3C7" stroke-width="1" />
+      <line x1="10" y1="32" x2="80" y2="32" stroke="#BDC3C7" stroke-width="1" />
+
+      <!-- Top Rim Opening -->
+      <line x1="0" y1="0" x2="90" y2="0" stroke="white" stroke-width="2" />
+
+      <!-- The Left & Right Rims -->
+      <circle cx="0" cy="0" r="5" fill="#E74C3C" />
+      <circle cx="90" cy="0" r="5" fill="#E74C3C" />
+      
+      <!-- The Shield Powerup -->
+      <circle id="dunk-powerup" cx="45" cy="-40" r="12" fill="#00FFFF" display="none" />
+    </g>
+
+    <!-- The Ball Group (With 3D curved lines!) -->
+    <g id="dunk-ball-group" transform="translate(100, 160)">
+      <circle id="dunk-aura" cx="0" cy="0" r="22" fill="none" stroke="#00FFFF" stroke-width="4" display="none" />
+      <circle cx="0" cy="0" r="15" fill="#E67E22" />
+      
+      <!-- 3D Basketball lines using SVG Quadratic curves -->
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#873600" stroke-width="2" />
+      <path d="M -9 -12 Q 2 0 -9 12" fill="none" stroke="#873600" stroke-width="2" />
+      <path d="M 9 -12 Q -2 0 9 12" fill="none" stroke="#873600" stroke-width="2" />
+    </g>
+
+    <!-- Game Over Screen -->
+    <g id="dunk-game-over" display="none">
+      <text x="50%" y="150" font-size="30" fill="white" font-weight="bold" text-anchor="middle">GAME OVER</text>
+      <text x="50%" y="190" font-size="20" fill="white" text-anchor="middle">Tap to Restart</text>
+    </g>
+
+    <!-- Fullscreen Invisible Tap Controller -->
+    <rect id="dunk-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+    
+    <!-- Exit Menu Button -->
+    <g pointer-events="all" id="dunk-btn-exit">
+      <rect x="0" y="0" width="80" height="80" opacity="0" />
+      <text x="15" y="35" font-size="24" fill="white" font-weight="bold" pointer-events="none">X</text>
+    </g>
+  </g>
+
+<!-- ==================== APP 13: PHONE NOTES ==================== -->
+  <g id="notes-app-view" display="none">
+    <rect width="100%" height="100%" fill="black" />
+    
+    <!-- The Scrolling Box -->
+    <use href="#scrollview" id="notes-scrollview">
+      <use href="#scrollview-item" height="1500" display="inline">
+        <textarea id="notes-content" x="10" y="55" width="100%-20" height="1445" font-size="24" fill="white" text-length="2048">Open the Fitbit App on your phone -> Settings -> Type your notes here!</textarea>
+      </use>
+    </use>
+
+    <!-- Fixed Exit Button (Opaque background so scrolling text hides behind it) -->
+    <g pointer-events="all" id="notes-btn-exit">
+      <rect x="0" y="0" width="100" height="50" fill="black" opacity="0.8" />
+      <text x="15" y="35" font-size="28" fill="#E74C3C" font-weight="bold" pointer-events="none">X</text>
+    </g>
+  </g>
+
+<!-- ==================== APP 14: WRIST RHYTHM ==================== -->
+  <g id="rhythm-app-view" display="none">
+    <rect width="100%" height="100%" fill="#111111" />
+    
+    <!-- HUD -->
+    <text id="rh-score" x="50%" y="40" font-size="28" fill="white" font-weight="bold" text-anchor="middle" text-length="16">0</text>
+    <text id="rh-combo" x="50%" y="70" font-size="20" fill="#F1C40F" font-weight="bold" text-anchor="middle" text-length="16">Combo: 0</text>
+    <text id="rh-lives" x="50%" y="100" font-size="18" fill="#E74C3C" text-anchor="middle" text-length="16">♥♥♥♥♥</text>
+    
+    <!-- The 4 Rhythm Lanes (Visual Backgrounds) -->
+    <rect x="0" y="110" width="84" height="100%" fill="#E74C3C" opacity="0.1" /> <!-- Red -->
+    <rect x="84" y="110" width="84" height="100%" fill="#F1C40F" opacity="0.1" /> <!-- Yellow -->
+    <rect x="168" y="110" width="84" height="100%" fill="#2ECC71" opacity="0.1" /> <!-- Green -->
+    <rect x="252" y="110" width="84" height="100%" fill="#3498DB" opacity="0.1" /> <!-- Blue -->
+
+    <!-- The Target Hit Line -->
+    <rect x="0" y="260" width="336" height="4" fill="white" opacity="0.6" />
+    
+    <!-- The Object Pool (12 Notes to prevent RAM crashes) -->
+    <g id="rh-notes-group" pointer-events="none">
+      <rect id="rh-n-0" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-1" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-2" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-3" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-4" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-5" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-6" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-7" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-8" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-9" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-10" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+      <rect id="rh-n-11" x="-100" y="0" width="60" height="20" fill="white" rx="5" display="none" />
+    </g>
+    
+    <!-- Invisible Touch Columns (This is what you actually tap!) -->
+    <g display="none" id="rh-touch-zones">
+      <rect id="rh-col-0" x="0" y="110" width="84" height="226" opacity="0" pointer-events="all" />
+      <rect id="rh-col-1" x="84" y="110" width="84" height="226" opacity="0" pointer-events="all" />
+      <rect id="rh-col-2" x="168" y="110" width="84" height="226" opacity="0" pointer-events="all" />
+      <rect id="rh-col-3" x="252" y="110" width="84" height="226" opacity="0" pointer-events="all" />
+    </g>
+
+    <!-- Overlay Screen (Handles starting/restarting) -->
+    <rect id="rh-overlay" width="100%" height="100%" fill="black" opacity="0.85" display="inline" pointer-events="all" />
+    <text id="rh-status" x="50%" y="160" font-size="34" fill="#2ECC71" font-weight="bold" text-anchor="middle" display="inline" text-length="20">TAP TO ROCK</text>
+  </g>
+
+<!-- ==================== APP 15: NEON HOP ==================== -->
+  <g id="hop-app-view" display="none">
+    <rect width="100%" height="100%" fill="#1A0B2E" /> <!-- Deep Neon Space -->
+
+    <!-- Perspective "Road" Lines matching image_cb53bb.png -->
+    <line x1="0" y1="336" x2="130" y2="0" stroke="#4A148C" stroke-width="4" />
+    <line x1="336" y1="336" x2="206" y2="0" stroke="#4A148C" stroke-width="4" />
+    <rect x="0" y="260" width="100%" height="2" fill="#E040FB" opacity="0.5" /> <!-- The Hit Line -->
+
+    <!-- Tile Object Pool (Recycled to prevent RAM crashes) -->
+    <g id="hop-tiles" pointer-events="none">
+      <rect id="hop-t-0" x="-100" y="0" width="80" height="30" rx="8" fill="#D500F9" opacity="0.8" display="none" />
+      <rect id="hop-t-1" x="-100" y="0" width="80" height="30" rx="8" fill="#D500F9" opacity="0.8" display="none" />
+      <rect id="hop-t-2" x="-100" y="0" width="80" height="30" rx="8" fill="#D500F9" opacity="0.8" display="none" />
+      <rect id="hop-t-3" x="-100" y="0" width="80" height="30" rx="8" fill="#D500F9" opacity="0.8" display="none" />
+    </g>
+
+    <!-- The Hopping Ball (Contains dynamic shadow and glow) -->
+    <g id="hop-ball-group" transform="translate(168, 260)" pointer-events="none">
+      <ellipse id="hop-shadow" cx="0" cy="15" rx="15" ry="5" fill="black" opacity="0.5" />
+      <circle id="hop-glow" cx="0" cy="0" r="18" fill="none" stroke="#E040FB" stroke-width="3" opacity="0.6"/>
+      <circle id="hop-ball" cx="0" cy="0" r="15" fill="#FFFFFF" />
+    </g>
+
+    <!-- HUD -->
+    <text id="hop-score" x="50%" y="45" font-size="36" fill="white" font-weight="bold" text-anchor="middle" text-length="12">0</text>
+    <text id="hop-feedback" x="50%" y="85" font-size="22" fill="#00E676" font-weight="bold" text-anchor="middle" text-length="20"></text>
+
+    <!-- Invisible Fullscreen Drag Controller -->
+    <rect id="hop-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+
+    <!-- Game Over Screen -->
+    <g id="hop-game-over" display="none">
+      <rect width="100%" height="100%" fill="black" opacity="0.85" pointer-events="all" />
+      <text x="50%" y="150" font-size="30" fill="white" font-weight="bold" text-anchor="middle">FELL OFF!</text>
+      <text id="hop-final-score" x="50%" y="190" font-size="20" fill="#E040FB" text-anchor="middle" text-length="20">Score: 0</text>
+      <text x="50%" y="230" font-size="18" fill="white" text-anchor="middle">Tap to Restart</text>
+    </g>
+  </g>
+
+<!-- ==================== APP 16: VECTOR GOLF ==================== -->
+  <g id="golf-app-view" display="none">
+    <!-- The Grass Base -->
+    <rect width="100%" height="100%" fill="#8BC34A" /> 
+    <rect x="5" y="5" width="100%-10" height="100%-10" fill="#689F38" rx="10" /> <!-- Darker inner grass -->
+
+    <!-- The Walls (Mapped exactly to our physics engine) -->
+    <!-- Outer bounds -->
+    <rect x="0" y="0" width="336" height="10" fill="#5D4037" />
+    <rect x="0" y="326" width="336" height="10" fill="#5D4037" />
+    <rect x="0" y="0" width="10" height="336" fill="#5D4037" />
+    <rect x="326" y="0" width="10" height="336" fill="#5D4037" />
+    <!-- The L-Shape Obstacle (Forces a bank shot!) -->
+    <rect x="130" y="10" width="20" height="200" fill="#5D4037" rx="4" />
+    <rect x="130" y="210" width="120" height="20" fill="#5D4037" rx="4" />
+
+    <!-- The Hole -->
+    <circle cx="280" cy="50" r="14" fill="#1B5E20" /> <!-- Green Lip -->
+    <circle cx="280" cy="50" r="10" fill="#000000" /> <!-- Darkness -->
+
+    <!-- The Aiming Trajectory Line -->
+    <line id="golf-aim-line" x1="0" y1="0" x2="0" y2="0" fill="white" stroke-width="4" stroke-dasharray="10, 10" display="none" />
+
+    <!-- The Golf Ball -->
+    <g id="golf-ball-group" transform="translate(50, 280)">
+      <circle cx="0" cy="0" r="8" fill="#FFFFFF" />
+      <circle cx="-2" cy="-2" r="3" fill="#EEEEEE" opacity="0.6" /> <!-- Shading -->
+    </g>
+
+    <!-- HUD -->
+    <text id="golf-strokes" x="20" y="40" font-size="24" fill="#FFFFFF" font-weight="bold" text-length="16">Strokes: 0</text>
+    
+    <!-- Fullscreen Touch Controller (For dragging the slingshot) -->
+    <rect id="golf-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+
+    <!-- Game Over Screen -->
+    <g id="golf-overlay" display="none">
+      <rect width="100%" height="100%" fill="black" opacity="0.85" pointer-events="all" />
+      <text id="golf-status" x="50%" y="150" font-size="36" fill="#FFEB3B" font-weight="bold" text-anchor="middle" text-length="20">HOLE IN ONE!</text>
+      <text x="50%" y="190" font-size="20" fill="white" text-anchor="middle">Tap to Restart</text>
+    </g>
+  </g>
+
+<!-- ==================== APP 17: WRIST SLICER ==================== -->
+  <g id="slicer-app-view" display="none">
+    <rect width="100%" height="100%" fill="#111111" /> <!-- Dojo Background -->
+
+    <!-- Orb Pool (The "Fruits") -->
+    <g id="slicer-orbs" pointer-events="none">
+      <circle id="slicer-o-0" cx="-100" cy="-100" r="22" fill="#E74C3C" display="none" />
+      <circle id="slicer-o-1" cx="-100" cy="-100" r="22" fill="#F1C40F" display="none" />
+      <circle id="slicer-o-2" cx="-100" cy="-100" r="22" fill="#2ECC71" display="none" />
+      <circle id="slicer-o-3" cx="-100" cy="-100" r="22" fill="#9B59B6" display="none" />
+      <circle id="slicer-o-4" cx="-100" cy="-100" r="22" fill="#E67E22" display="none" />
+    </g>
+
+    <!-- The Slicing Blade -->
+    <line id="slicer-blade" x1="0" y1="0" x2="0" y2="0" fill="white" stroke-width="6" opacity="0.8" display="none" pointer-events="none" />
+
+    <!-- HUD (Moved to avoid rounded corners and top-left back button) -->
+    <text id="slicer-time" x="50%" y="45" font-size="28" fill="#FFFFFF" font-weight="bold" text-anchor="middle" text-length="10">30s</text>
+    <text id="slicer-score" x="100%-30" y="45" font-size="24" fill="#2ECC71" font-weight="bold" text-anchor="end" text-length="12">0</text>
+    <text id="slicer-hi-score" x="100%-30" y="75" font-size="18" fill="#F1C40F" text-anchor="end" text-length="16">HI: 0</text>
+
+    <!-- Fullscreen Touch Controller -->
+    <rect id="slicer-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+
+    <!-- Game Over Screen -->
+    <g id="slicer-overlay" display="none">
+      <rect width="100%" height="100%" fill="black" opacity="0.85" pointer-events="all" />
+      <text id="slicer-status" x="50%" y="130" font-size="34" fill="#E67E22" font-weight="bold" text-anchor="middle" text-length="20">TIME UP!</text>
+      <text id="slicer-final-score" x="50%" y="170" font-size="24" fill="white" text-anchor="middle" text-length="20">Score: 0</text>
+      <text x="50%" y="210" font-size="20" fill="#BDC3C7" text-anchor="middle">Tap to Slice Again</text>
+    </g>
+  </g>
+
+
+<!-- ==================== APP 18: ABYSS FALL ==================== -->
+  <g id="abyss-app-view" display="none">
+    <rect width="100%" height="100%" fill="#0A0A1A" /> <!-- Dark Abyss -->
+
+    <!-- Object Pool: 4 Rows of Walls. Each row has a Left and Right piece to form the gap -->
+    <g id="abyss-walls" pointer-events="none">
+      <rect id="abyss-w-0-l" x="0" y="400" width="100" height="15" fill="#00E5FF" rx="4" />
+      <rect id="abyss-w-0-r" x="180" y="400" width="156" height="15" fill="#00E5FF" rx="4" />
+      
+      <rect id="abyss-w-1-l" x="0" y="400" width="100" height="15" fill="#00E5FF" rx="4" />
+      <rect id="abyss-w-1-r" x="180" y="400" width="156" height="15" fill="#00E5FF" rx="4" />
+      
+      <rect id="abyss-w-2-l" x="0" y="400" width="100" height="15" fill="#00E5FF" rx="4" />
+      <rect id="abyss-w-2-r" x="180" y="400" width="156" height="15" fill="#00E5FF" rx="4" />
+      
+      <rect id="abyss-w-3-l" x="0" y="400" width="100" height="15" fill="#00E5FF" rx="4" />
+      <rect id="abyss-w-3-r" x="180" y="400" width="156" height="15" fill="#00E5FF" rx="4" />
+    </g>
+
+    <!-- The Player Ball -->
+    <circle id="abyss-ball" cx="168" cy="80" r="12" fill="#FF1744" pointer-events="none" />
+
+    <!-- Safe HUD (Right side) -->
+    <text id="abyss-score" x="100%-25" y="40" font-size="28" fill="#FFFFFF" font-weight="bold" text-anchor="end" text-length="10">0</text>
+    <!-- Top Death Ceiling -->
+    <rect x="0" y="0" width="100%" height="5" fill="#FF1744" opacity="0.6" />
+
+    <!-- Game Over Screen -->
+    <g id="abyss-overlay" display="none">
+      <rect width="100%" height="100%" fill="black" opacity="0.85" pointer-events="all" />
+      <text x="50%" y="150" font-size="34" fill="#FF1744" font-weight="bold" text-anchor="middle">CRUSHED!</text>
+      <text id="abyss-final" x="50%" y="190" font-size="24" fill="white" text-anchor="middle" text-length="16">Score: 0</text>
+      <text x="50%" y="230" font-size="20" fill="#00BCD4" text-anchor="middle">Tap to Retry</text>
+    </g>
+  </g>
+
+
+<!-- ==================== APP 19: NEON DROP ==================== -->
+<g id="neon-app-view" display="none">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#111122" />
+
+  <!-- HUD (safe from rounded edges) -->
+  <text id="neon-score" x="100%-25" y="40" font-size="28" fill="#F1C40F" font-weight="bold" text-anchor="end" text-length="12">0</text>
+  <text id="neon-multiplier" x="100%-25" y="68" font-size="20" fill="#FFFFFF" text-anchor="end" text-length="12">x1</text>
+  <text id="neon-drops" x="100%-25" y="96" font-size="20" fill="#9B59B6" text-anchor="end" text-length="12">Drops: 5</text>
+
+  <!-- PEGS (same as before) -->
+  <g id="neon-pegs" pointer-events="none">
+    <!-- Row 1 -->
+    <circle cx="56" cy="100" r="8" fill="#E74C3C" />
+    <circle cx="112" cy="100" r="8" fill="#F1C40F" />
+    <circle cx="168" cy="100" r="8" fill="#2ECC71" />
+    <circle cx="224" cy="100" r="8" fill="#3498DB" />
+    <circle cx="280" cy="100" r="8" fill="#9B59B6" />
+    <!-- Row 2 -->
+    <circle cx="84" cy="160" r="8" fill="#E74C3C" />
+    <circle cx="140" cy="160" r="8" fill="#F1C40F" />
+    <circle cx="196" cy="160" r="8" fill="#2ECC71" />
+    <circle cx="252" cy="160" r="8" fill="#3498DB" />
+    <!-- Row 3 -->
+    <circle cx="56" cy="220" r="8" fill="#F1C40F" />
+    <circle cx="112" cy="220" r="8" fill="#2ECC71" />
+    <circle cx="168" cy="220" r="8" fill="#3498DB" />
+    <circle cx="224" cy="220" r="8" fill="#9B59B6" />
+    <circle cx="280" cy="220" r="8" fill="#E74C3C" />
+    <!-- Row 4 -->
+    <circle cx="84" cy="280" r="8" fill="#2ECC71" />
+    <circle cx="140" cy="280" r="8" fill="#3498DB" />
+    <circle cx="196" cy="280" r="8" fill="#9B59B6" />
+    <circle cx="252" cy="280" r="8" fill="#E74C3C" />
+  </g>
+
+  <!-- The Ball (starts at top) -->
+  <circle id="neon-ball" cx="168" cy="30" r="10" fill="#FFD700" pointer-events="none" />
+
+  <!-- Buckets at Bottom -->
+  <g id="neon-buckets" pointer-events="none">
+    <rect x="10"  y="320" width="52" height="16" rx="3" fill="#E74C3C" />
+    <text x="36"  y="333" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1x</text>
+    <rect x="70"  y="320" width="52" height="16" rx="3" fill="#F1C40F" />
+    <text x="96"  y="333" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2x</text>
+    <rect x="130" y="320" width="52" height="16" rx="3" fill="#2ECC71" />
+    <text x="156" y="333" font-size="14" fill="white" text-anchor="middle" font-weight="bold">3x</text>
+    <rect x="190" y="320" width="52" height="16" rx="3" fill="#3498DB" />
+    <text x="216" y="333" font-size="14" fill="white" text-anchor="middle" font-weight="bold">5x</text>
+    <rect x="250" y="320" width="52" height="16" rx="3" fill="#9B59B6" />
+    <text x="276" y="333" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2x</text>
+    <rect x="310" y="320" width="16" height="16" rx="3" fill="#E74C3C" />
+    <text x="318" y="333" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1x</text>
+  </g>
+
+  <!-- Touch Area: tap to aim and drop -->
+  <rect id="neon-drop-zone" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+
+  <!-- Round Overlay -->
+  <g id="neon-overlay" display="none">
+    <rect width="100%" height="100%" fill="black" opacity="0.85" pointer-events="all" />
+    <text id="neon-status" x="50%" y="140" font-size="30" fill="#F1C40F" font-weight="bold" text-anchor="middle" text-length="24">ROUND COMPLETE</text>
+    <text id="neon-final" x="50%" y="190" font-size="28" fill="white" text-anchor="middle" text-length="16">0</text>
+    <text id="neon-hi" x="50%" y="230" font-size="18" fill="#9B59B6" text-anchor="middle" text-length="20">BEST: 0</text>
+    <text x="50%" y="280" font-size="20" fill="#2ECC71" text-anchor="middle">Tap to Play Again</text>
+  </g>
+
+</g>
+
+<!-- ==================== APP 21: NEON STACK ==================== -->
+  <g id="stack-app-view" display="none">
+    <rect width="100%" height="100%" fill="#1A1A1A" /> <!-- Dark Steel -->
+
+    <!-- Base Platform -->
+    <rect x="0" y="320" width="336" height="16" fill="#424242" />
+
+    <!-- Tower Object Pool (8 blocks) -->
+    <g id="stack-tower" pointer-events="none">
+      <rect id="stack-t-0" x="0" y="0" width="100" height="20" rx="2" fill="#D32F2F" display="none"/>
+      <rect id="stack-t-1" x="0" y="0" width="100" height="20" rx="2" fill="#C62828" display="none"/>
+      <rect id="stack-t-2" x="0" y="0" width="100" height="20" rx="2" fill="#B71C1C" display="none"/>
+      <rect id="stack-t-3" x="0" y="0" width="100" height="20" rx="2" fill="#D32F2F" display="none"/>
+      <rect id="stack-t-4" x="0" y="0" width="100" height="20" rx="2" fill="#C62828" display="none"/>
+      <rect id="stack-t-5" x="0" y="0" width="100" height="20" rx="2" fill="#B71C1C" display="none"/>
+      <rect id="stack-t-6" x="0" y="0" width="100" height="20" rx="2" fill="#D32F2F" display="none"/>
+      <rect id="stack-t-7" x="0" y="0" width="100" height="20" rx="2" fill="#C62828" display="none"/>
+    </g>
+
+    <!-- The Moving Block (Active Layer) -->
+    <rect id="stack-moving" x="0" y="100" width="100" height="20" rx="2" fill="#FF1744" display="none"/>
+
+    <!-- Perfect Hit Visual Flash -->
+    <rect id="stack-flash" width="100%" height="100%" fill="white" opacity="0" pointer-events="none" />
+
+    <!-- Safe HUD (Moved to top-right to avoid rounded corners) -->
+    <text id="stack-score" x="100%-25" y="45" font-size="34" fill="#FFFFFF" font-weight="bold" text-anchor="end" text-length="10">0</text>
+    
+    <!-- Fullscreen Touch Controller -->
+    <rect id="stack-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+
+    <!-- Game Over Screen -->
+    <g id="stack-overlay" display="none">
+      <rect width="100%" height="100%" fill="black" opacity="0.85" pointer-events="all" />
+      <text x="50%" y="150" font-size="34" fill="#FF1744" font-weight="bold" text-anchor="middle">OFF CENTER!</text>
+      <text id="stack-final" x="50%" y="190" font-size="24" fill="white" text-anchor="middle" text-length="20">Score: 0</text>
+      <text x="50%" y="230" font-size="20" fill="#FFC107" text-anchor="middle">Tap to Restack</text>
+    </g>
+  </g>
+
+<!-- ==================== APP 21: NEON RACER ==================== -->
+  <g id="racer-app-view" display="none">
+    <rect width="100%" height="100%" fill="#111111" /> <!-- Asphalt -->
+
+    <!-- Scrolling Road Lines (Illusion of speed) -->
+    <g id="racer-lines" pointer-events="none">
+      <rect id="racer-l-0" x="110" y="0" width="4" height="60" fill="#333333" />
+      <rect id="racer-l-1" x="222" y="0" width="4" height="60" fill="#333333" />
+      <rect id="racer-l-2" x="110" y="150" width="4" height="60" fill="#333333" />
+      <rect id="racer-l-3" x="222" y="150" width="4" height="60" fill="#333333" />
+      <rect id="racer-l-4" x="110" y="300" width="4" height="60" fill="#333333" />
+      <rect id="racer-l-5" x="222" y="300" width="4" height="60" fill="#333333" />
+    </g>
+
+    <!-- Obstacle Pool (5 Enemy Cars/Barricades) -->
+    <g id="racer-enemies" pointer-events="none">
+      <rect id="racer-e-0" x="0" y="-100" width="40" height="60" rx="4" fill="#FF1744" display="none"/>
+      <rect id="racer-e-1" x="0" y="-100" width="40" height="60" rx="4" fill="#FF9100" display="none"/>
+      <rect id="racer-e-2" x="0" y="-100" width="40" height="60" rx="4" fill="#FF1744" display="none"/>
+      <rect id="racer-e-3" x="0" y="-100" width="40" height="60" rx="4" fill="#FF9100" display="none"/>
+      <rect id="racer-e-4" x="0" y="-100" width="40" height="60" rx="4" fill="#FF1744" display="none"/>
+    </g>
+
+    <!-- Player Car -->
+    <rect id="racer-player" x="148" y="250" width="40" height="60" rx="4" fill="#00E5FF" pointer-events="none" />
+
+    <!-- Safe HUD -->
+    <text id="racer-score" x="100%-25" y="45" font-size="34" fill="#FFFFFF" font-weight="bold" text-anchor="end" text-length="10">0</text>
+    
+    <!-- Fullscreen Touch Controller (For dragging the car) -->
+    <rect id="racer-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+
+    <!-- Game Over Screen -->
+    <g id="racer-overlay" display="none">
+      <rect width="100%" height="100%" fill="black" opacity="0.85" pointer-events="all" />
+      <text x="50%" y="150" font-size="34" fill="#E91E63" font-weight="bold" text-anchor="middle">WRECKED!</text>
+      <text id="racer-final" x="50%" y="190" font-size="24" fill="white" text-anchor="middle" text-length="20">Score: 0</text>
+      <text x="50%" y="230" font-size="20" fill="#00E5FF" text-anchor="middle">Tap to Race</text>
+    </g>
+  </g>
+
+
+<!-- ==================== APP 22: COMMAND RUSH ==================== -->
+  <g id="rush-app-view" display="none">
+    <rect width="100%" height="100%" fill="#2C3E50" /> <!-- Deep Industrial Blue -->
+
+    <!-- Top HUD -->
+    <text id="rush-score" x="100%-25" y="45" font-size="28" fill="#FFFFFF" font-weight="bold" text-anchor="end" text-length="10">0</text>
+    <text id="rush-hi-score" x="100%-25" y="75" font-size="18" fill="#FF9800" font-weight="bold" text-anchor="end" text-length="16">HI: 0</text>
+
+    <!-- The Massive Command Text -->
+    <text id="rush-command" x="50%" y="180" font-size="50" fill="#FFFFFF" font-weight="bold" text-anchor="middle" text-length="20">TAP!</text>
+
+    <!-- Countdown Timer Bar (Shrinks horizontally) -->
+    <rect id="rush-time-bg" x="10%" y="260" width="80%" height="20" rx="10" fill="#34495E" />
+    <rect id="rush-time-bar" x="10%" y="260" width="80%" height="20" rx="10" fill="#FF9800" />
+
+    <!-- Fullscreen Touch Controller -->
+    <rect id="rush-controller" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="all" />
+
+    <!-- Game Over Screen -->
+    <g id="rush-overlay" display="none">
+      <rect width="100%" height="100%" fill="#E74C3C" opacity="0.95" pointer-events="all" />
+      <text id="rush-fail-reason" x="50%" y="140" font-size="30" fill="white" font-weight="bold" text-anchor="middle" text-length="20">TOO SLOW!</text>
+      <text id="rush-final" x="50%" y="190" font-size="24" fill="white" text-anchor="middle" text-length="20">Score: 0</text>
+      <text x="50%" y="230" font-size="20" fill="#2C3E50" font-weight="bold" text-anchor="middle">Tap to Restart</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== GLOBAL BACK OVERLAY ==================== -->
+  <g id="global-home-btn" display="none">
+    <!-- Invisible massive touch target -->
+    <rect x="0" y="0" width="100" height="100" opacity="0" pointer-events="all" />
+    
+    <!-- Now a Grey Button! -->
+    <circle cx="40" cy="40" r="26" fill="#555555" opacity="1.0" pointer-events="none" />
+    
+    <!-- Fixed White Arrow: Fitbit requires 'fill' instead of 'stroke' -->
+    <line x1="47" y1="28" x2="31" y2="40" fill="white" stroke-width="4" pointer-events="none" />
+    <line x1="31" y1="40" x2="47" y2="52" fill="white" stroke-width="4" pointer-events="none" />
+  </g>
+</svg>
