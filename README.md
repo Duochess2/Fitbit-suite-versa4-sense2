@@ -21,6 +21,16 @@ Under companion/index.js, insert your own OpenRouter Key
 
 To upload text, go to settings under Google Health App and insert the text while ensuring the watch is on the current app. The text will be sent to the watch within a few seconds.
 
+## 📸 App Showcase
+
+| Pin Page | App Hub (Page 1) | App Hub (Page 5) |
+| :---: | :---: | :---: |
+| <img width="200" alt="Pin Page" src="https://github.com/user-attachments/assets/1ad5cb9c-2f7c-4813-9f84-c484fd24f9d7" /> | <img width="200" alt="Page 1" src="https://github.com/user-attachments/assets/0a88c61f-a2d7-4fbc-8f8d-18ece307c70b" /> | <img width="200" alt="Page 5" src="https://github.com/user-attachments/assets/bb0d711a-936e-46ec-8b55-b656d069bfab" /> |
+
+| 2048 Game | Pong | Watch Notes |
+| :---: | :---: | :---: |
+| <img width="200" alt="2048" src="https://github.com/user-attachments/assets/95c9e325-69eb-4471-9325-8fba1bcfcd20" /> | <img width="200" alt="Pong" src="https://github.com/user-attachments/assets/6579b3e0-0f02-456e-a6b8-deea2c14ee8f" /> | <img width="200" alt="Notes" src="https://github.com/user-attachments/assets/21749fcc-ecf1-4ce2-8efa-f5409bd1abc0" /> |
+
 <img width="250" height="250" alt="Pin (Upload)" src="https://github.com/user-attachments/assets/1ad5cb9c-2f7c-4813-9f84-c484fd24f9d7" /> 
 Pin Page
 
