@@ -15,6 +15,10 @@ Unofficial approach for sideloading apps of Versa 4 & Sense 2: https://github.co
 
 *Pin System included* To change pin, under /app/index.js, locate const CORRECT_PIN = "0000"; (Default pin) and change it to another 4 digit number
 
+*Offline 2FA (Github)* Under app/totpApp.js, enter your custom Github key (Found through 2FA page, instead of scanning qr code manually select show secret key.
+
 Under companion/index.js, insert your own OpenRouter Key
 
 To upload text, go to settings under Google Health App and insert the text while ensuring the watch is on the current app. The text will be sent to the watch within a few seconds.
+
+
